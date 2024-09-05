@@ -4,6 +4,9 @@ import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import authRoute from './Routes/auth.js';
+import userRoute from './Routes/user.js';
+import docRoute from './Routes/doctor.js';
+import reviewRoute from './Routes/review.js';
 
 dotenv.config()
 
@@ -38,6 +41,9 @@ app.use(cors(corsOption ))
 //route the api
 
 app.use('/api/v1/auth',authRoute)
+app.use('/api/v1/users',userRoute)
+app.use('/api/v1/doctor',docRoute)
+app.use('/api/v1/review',reviewRoute)
 
 
 
